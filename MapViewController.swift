@@ -16,13 +16,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var MapKit: MKMapView!
     
     let manager = CLLocationManager()
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let actualLocation = locations[0]
+        let mySpan:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(actualLocation.coordinate.latitude, actualLocation.coordinate.longitude)
+        let myRegion:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, mySpan)
+        MapKit.setRegion(myRegion, animated: true)
+        
+        self.MapKit.showsUserLocation = true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
     }
 
 }
