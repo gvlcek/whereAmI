@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DD86CC601E67888100E21763 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86CC5F1E67888100E21763 /* MapViewController.swift */; };
+		DD86CC631E67902C00E21763 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86CC621E67902C00E21763 /* CoreLocation.framework */; };
 		DDE0A61E1E6773F400FA8C98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE0A61D1E6773F400FA8C98 /* AppDelegate.swift */; };
-		DDE0A6201E6773F400FA8C98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE0A61F1E6773F400FA8C98 /* ViewController.swift */; };
+		DDE0A6201E6773F400FA8C98 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE0A61F1E6773F400FA8C98 /* MainViewController.swift */; };
 		DDE0A6231E6773F400FA8C98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE0A6211E6773F400FA8C98 /* Main.storyboard */; };
 		DDE0A6251E6773F400FA8C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE0A6241E6773F400FA8C98 /* Assets.xcassets */; };
 		DDE0A6281E6773F400FA8C98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE0A6261E6773F400FA8C98 /* LaunchScreen.storyboard */; };
@@ -37,9 +38,10 @@
 
 /* Begin PBXFileReference section */
 		DD86CC5F1E67888100E21763 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
+		DD86CC621E67902C00E21763 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DDE0A61A1E6773F400FA8C98 /* whereAmI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whereAmI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE0A61D1E6773F400FA8C98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDE0A61F1E6773F400FA8C98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DDE0A61F1E6773F400FA8C98 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DDE0A6221E6773F400FA8C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDE0A6241E6773F400FA8C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDE0A6271E6773F400FA8C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD86CC631E67902C00E21763 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD86CC611E67902B00E21763 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD86CC621E67902C00E21763 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DDE0A6111E6773F400FA8C98 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +96,7 @@
 				DDE0A6311E6773F400FA8C98 /* whereAmITests */,
 				DDE0A63C1E6773F400FA8C98 /* whereAmIUITests */,
 				DDE0A61B1E6773F400FA8C98 /* Products */,
+				DD86CC611E67902B00E21763 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE0A61D1E6773F400FA8C98 /* AppDelegate.swift */,
-				DDE0A61F1E6773F400FA8C98 /* ViewController.swift */,
+				DDE0A61F1E6773F400FA8C98 /* MainViewController.swift */,
 				DD86CC5F1E67888100E21763 /* MapViewController.swift */,
 				DDE0A6211E6773F400FA8C98 /* Main.storyboard */,
 				DDE0A6241E6773F400FA8C98 /* Assets.xcassets */,
@@ -277,7 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDE0A6201E6773F400FA8C98 /* ViewController.swift in Sources */,
+				DDE0A6201E6773F400FA8C98 /* MainViewController.swift in Sources */,
 				DD86CC601E67888100E21763 /* MapViewController.swift in Sources */,
 				DDE0A61E1E6773F400FA8C98 /* AppDelegate.swift in Sources */,
 			);

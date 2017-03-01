@@ -12,7 +12,7 @@
         <!--Where Am I?-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Where Am I?" id="BYZ-38-t0r" customClass="ViewController" customModule="whereAmI" sceneMemberID="viewController">
+                <viewController title="Where Am I?" id="BYZ-38-t0r" customClass="MainViewController" customModule="whereAmI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -49,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727.5" y="280.98591549295776"/>
+            <point key="canvasLocation" x="675" y="281"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="ZcZ-ch-vtV">
@@ -62,12 +62,26 @@
                     <view key="view" contentMode="scaleToFill" id="528-eO-DWX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3XJ-Ig-drS">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3XJ-Ig-drS" firstAttribute="bottom" secondItem="E2M-ZC-pw2" secondAttribute="top" id="1EB-lC-yq4"/>
+                            <constraint firstAttribute="trailing" secondItem="3XJ-Ig-drS" secondAttribute="trailing" id="3g1-hT-DTe"/>
+                            <constraint firstItem="3XJ-Ig-drS" firstAttribute="top" secondItem="pW1-nv-smE" secondAttribute="bottom" id="Zme-iD-L7Z"/>
+                            <constraint firstItem="3XJ-Ig-drS" firstAttribute="leading" secondItem="528-eO-DWX" secondAttribute="leading" id="m4O-Dg-zTB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="MapKit" destination="3XJ-Ig-drS" id="va1-tf-zcf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiD-fP-3Fe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1518.75" y="280.98591549295776"/>
+            <point key="canvasLocation" x="1464" y="281"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FnX-5d-onk">
