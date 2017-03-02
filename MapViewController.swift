@@ -26,6 +26,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         self.MapKit.showsUserLocation = true
         
+        //It pins only the initial location
         if (aux == 0) {
             let myAnnotation: MKPointAnnotation = MKPointAnnotation()
             myAnnotation.coordinate = CLLocationCoordinate2DMake(actualLocation.coordinate.latitude, actualLocation.coordinate.longitude);
