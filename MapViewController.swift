@@ -12,10 +12,10 @@ import CoreLocation
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
-    
     @IBOutlet weak var MapKit: MKMapView!
     
     let manager = CLLocationManager()
+    var aux:Int = 0
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let actualLocation = locations[0]
@@ -25,6 +25,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         MapKit.setRegion(myRegion, animated: true)
         
         self.MapKit.showsUserLocation = true
+        
+        if (aux == 0) {
+            let myAnnotation: MKPointAnnotation = MKPointAnnotation()
+            myAnnotation.coordinate = CLLocationCoordinate2DMake(actualLocation.coordinate.latitude, actualLocation.coordinate.longitude);
+            myAnnotation.title = "Where am I"
+            MapKit.addAnnotation(myAnnotation)
+            aux = 1
+        }
     }
 
     override func viewDidLoad() {
